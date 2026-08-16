@@ -1,0 +1,55 @@
+lec 15 data gathering
+
+1) csv
+2) json/sql
+3) fetch data from api
+4) web scraping
+
+# CSV(comma seprated value)
+  
+agar kisi url ke link se data extract kana hai toh
+import request 
+from io import StringIO
+
+url = "paste your url"
+headers = {"  chat gpt kar lo   "}
+req = request.ger(url,headers=headers)
+data = StringIO(req.text)
+pd.read_csv(data)
+
+# to change data type
+pd.resd_csv('file name',dtype={'column_name':datatype to convert})
+
+# handling data
+dates as object save hota hai csv file me
+
+pd.read_csv('file name',parse_dates=['date(column name where date is given)'])
+
+#convertors
+
+apply some transformation when we have loaded the data set
+ ex-->royal challengers bengluru -->RCB
+      Mumbai Indian -->Mi
+
+first create fun.
+def rename():
+	if name=="Royal challangers bengluru"
+		return "RCB"
+	else
+	   return name
+pd.read_csv('table name',converters={'column name:rename(fun. name)'}
+
+#na_value parameter
+
+nan value(missing value) 
+agar nan  value ko change karna hai toh
+
+pd.read_csv('tablename',na_values=['male'])
+
+
+# Loading a Huge dataset in chunks
+
+agar table ko part me divide karna ho matlab 50,50,50 me divide karna hai
+
+dfs=pd.read_csv('table name',chunksize=size to divide)
+

@@ -1,0 +1,10 @@
+univariate analysis -->
+ uni -> single
+ variate -> variable
+ single variable ka analysis karna univariate analysis hota hai.
+ ek single column ka analysis karna -> univariate analysis
+ ek sath do column ka analysis karna -> bivariate analysis
+ do se jhyada -> multivariate analysis
+
+data ->numerical(height, weight)
+    ->categorical(country, state, gender)
